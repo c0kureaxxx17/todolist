@@ -8,7 +8,19 @@ type Props = {
 }
 
 const TaskItem: React.FC<Props> = ({ task, handleDone, handleDelete}) => {
-  return <span>test!</span>
+
+  return (
+    <li>
+      <label>
+        <input
+          type="checkbox"
+          onClick={ () => handleDone(task)}
+        />
+        <span>tasktitle</span>
+      </label>
+      <button onClick={ () => handleDelete(task)}>削除</button>
+    </li>
+  )
 }
 
 export default TaskItem
