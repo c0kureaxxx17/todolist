@@ -16,7 +16,7 @@ const TaskItem: React.FC<Props> = ({ task, handleDone, handleDelete}) => {
           type="checkbox"
           onClick={ () => handleDone(task)}
         />
-        <span>tasktitle!!</span>
+        <span>{task.title}</span>
       </label>
       <button onClick={ () => handleDelete(task)}>削除</button>
     </li>
